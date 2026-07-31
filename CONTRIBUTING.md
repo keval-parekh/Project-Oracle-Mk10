@@ -7,10 +7,7 @@ cause and fix it.
 
 ## Workflow
 
-1. **Pick an open issue** from the [Issues tab](../../issues). Each one is
-   labeled with the module it likely touches (`rollout`, `overlay`,
-   `inference`, `webcam`, `device`, `model`) as a hint — but treat that as a
-   hint, not a guarantee.
+1. **Pick an open issue** from the [Issues tab](../../issues).
 2. **Fork & clone**, then install dev dependencies:
    ```bash
    pip install -e ".[dev]"
