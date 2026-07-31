@@ -6,9 +6,6 @@ labels: bug
 assignees: ""
 ---
 
-**Module (best guess)**
-<!-- e.g. rollout / overlay / inference / webcam / device / model -->
-
 **Symptom**
 <!-- What did you observe? Wrong heatmap, crash, wrong label, wrong colors,
      upside-down overlay, etc. Describe what's WRONG, not the cause. -->
