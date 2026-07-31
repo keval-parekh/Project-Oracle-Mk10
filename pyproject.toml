@@ -1,0 +1,31 @@
+[project]
+name = "project-oracle-mk19"
+version = "0.1.0"
+description = "Real-time ViT Attention Rollout webcam visualizer"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "opencv-python",
+    "numpy",
+    "pillow",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.scripts]
+project-oracle-mk19 = "oracle_mk19.webcam:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oracle_mk19"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
