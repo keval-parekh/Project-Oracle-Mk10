@@ -6,7 +6,7 @@
 
 The Galactic Federation’s scout ship just crash-landed right in the middle of Manipal, narrowly missing an auto-rickshaw and skidding into Student Plaza. Aliens Sparsh and Jasmine have stepped out onto Earth for the first time, but human civilization makes absolutely no sense to them.
 
-To navigate, they rely on Project Oracle Mk19, a highly advanced bilogical scanner. When pointed at a scene, the scanner is supposed to generate a glowing heatmap, highlighting the most important objects in the room to help them identify threats and resources.
+To navigate, they rely on Project Oracle Mk19, a highly advanced biological scanner. When pointed at a scene, the scanner is supposed to generate a glowing heatmap, highlighting the most important objects in the room to help them identify threats and resources.
 
 Unfortunately, atmospheric entry completely scrambled the scanner's neural pathways. Right now, the Oracle Mk19 is suffering from severe system failures across the board:
 
