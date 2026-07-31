@@ -1,7 +1,6 @@
 # Project Oracle Mk19 👾
 
 ![Project Oracle Mk19 Challenge](oracle_mk19.gif) 
-*(Add your GIF here)*
 
 ## The Lore
 
