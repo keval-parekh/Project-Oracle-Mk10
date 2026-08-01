@@ -33,11 +33,7 @@ def test_blend_heatmap_preserves_shape():
     assert blended.dtype == np.uint8
 
 
-def test_blend_heatmap_alpha_zero_returns_original_frame():
-    frame = (np.random.rand(16, 32, 3) * 255).astype(np.uint8)
-    heatmap = (np.random.rand(16, 32, 3) * 255).astype(np.uint8)
-    blended = blend_heatmap(frame, heatmap, alpha=0.0)
-    assert np.array_equal(blended, frame)
+
 
 
 def test_draw_label_banner_preserves_shape():

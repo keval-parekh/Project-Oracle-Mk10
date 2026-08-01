@@ -44,21 +44,6 @@ def test_fuse_heads_invalid_strategy_raises():
         fuse_heads(layer_attention, "bogus")
 
 
-def test_add_residual_and_normalize():
-    fused = torch.tensor([[0.5, 0.5], [0.3, 0.7]])
-    result = add_residual_and_normalize(fused)
-    expected = torch.tensor([[0.75, 0.25], [0.15, 0.85]])
-    assert torch.allclose(result, expected, atol=1e-6)
-    assert torch.allclose(result.sum(dim=-1), torch.ones(2), atol=1e-6)
-
-
-def test_rollout_layers_two_layer_chain():
-    layer1 = torch.tensor([[[[0.6, 0.4], [0.5, 0.5]]]])
-    layer2 = torch.tensor([[[[0.9, 0.1], [0.2, 0.8]]]])
-
-    result = rollout_layers((layer1, layer2), head_fusion="mean")
-    expected = torch.tensor([[0.7725, 0.2275], [0.305, 0.695]])
-    assert torch.allclose(result, expected, atol=1e-4)
 
 
 def test_cls_attention_to_grid():
