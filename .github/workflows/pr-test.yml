@@ -1,0 +1,36 @@
+name: PR Review Tests
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0   # need history to fetch from another branch
+
+      - name: Pull in hidden tests from tests branch
+        run: |
+          git fetch origin tests
+          # overlay: hidden tests always win, PR contributor can't alter them
+          git checkout origin/tests -- tests/tests_pr
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install numpy opencv-python-headless pytest
+          pip install -e . --no-deps
+
+      - name: Run full test suite (regular + PR review)
+        run: python -m pytest tests/ -v

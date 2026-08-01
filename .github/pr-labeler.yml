@@ -1,0 +1,52 @@
+# Config for actions/labeler — auto-labels PRs based on which files changed.
+# Docs: https://github.com/actions/labeler
+
+"heatmap/overlay":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/oracle_mk19/overlay.py"
+          - "tests/test_overlay.py"
+
+"rollout":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/oracle_mk19/rollout.py"
+          - "tests/test_rollout.py"
+
+"model/inference":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/oracle_mk19/model.py"
+          - "src/oracle_mk19/inference.py"
+
+"webcam":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/oracle_mk19/webcam.py"
+          - "main.py"
+
+"config":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/oracle_mk19/config.py"
+          - "src/oracle_mk19/device.py"
+          - "pyproject.toml"
+          - "uv.lock"
+          - ".python-version"
+
+"docs":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "README.md"
+
+"dependencies":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "pyproject.toml"
+          - "uv.lock"
+
+"ci":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
