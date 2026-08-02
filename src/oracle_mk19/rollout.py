@@ -5,9 +5,9 @@ from .config import PATCH_GRID
 
 def fuse_heads(layer_attention: torch.Tensor, head_fusion: str = "mean") -> torch.Tensor:
     if head_fusion == "mean":
-        return layer_attention.mean(dim=1)
+        return layer_attention.mean(dim=0)
     if head_fusion == "max":
-        return layer_attention.max(dim=1)[0]
+        return layer_attention.max(dim=0)[0]
     if head_fusion == "min":
         return layer_attention.min(dim=1)[0]
     raise ValueError(f"Unknown head_fusion strategy: {head_fusion!r}")
